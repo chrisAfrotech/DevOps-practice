@@ -1,0 +1,228 @@
+*************GIT & GITHUB VCS(COURSERA COURSE)************
+
+
+******************************************************************
+            First part :) (On road to master GITHUB)
+******************************************************************
+
+
+A version control system allows us to keep track of when and who did what changes to our files. Those can be code, configuration, images, or whatever else we need to track.
+
+Diffing files:
+The diff tool shows all the differences between any type of file. By highlighting what’s changed, it helps us understand the changes and see how the files have been modified.
+-eg command:
+diff -u old_file new_file > change.diff :  So with this command, we're generating a file called change.diff with the contents of diff-u command. 
+
+What does the patch command do?
+It applies the changes contained in a diff file to another file.
+-eg command:
+patch cpu_usage.py < cpu_usage.diff
+
+While diff is the command that generates the difference between two files, patch is the command that applies those differences to the original file.
+So To automatically apply changes to a file, we need to run the patch command on the file that we want to modify with the diff file as input.
+
+Finally diff is used to find differences between two files. On its own, it’s a bit hard to use; instead, use it with diff -u to find lines which differ in two files:
+diff -u is used to compare two files, line by line, and have the differing lines compared side-by-side in the same output.
+Patch is useful for applying file differences.
+
+****************VCS (version control system)***************
+A Version Control System keeps track of the changes that we make to our files.
+By keeping track of the changes that we make to our files, a VCS lets us know when a file changed, who changed it, and also lets us easily roll back those changes.
+We can use it to store configuration files, documentation, data files, or any other content that we may need to track. Because of the way tools like diff and patch work, a VCS is especially useful when tracking text files, which can be compared with diff and modified with patch. 
+
+  ----VCS and automation
+By having each change tracked in the VCS, it's very easy to go back to previous versions when an issue with a change is discovered.
+One of the main benefits of a VCS is that you can see the history of how files changed and understand what changed at each step and what motivated the change.
+
+  ----What is GIT:
+ Git is a VCS created in 2005 by Linus Torvalds. The developer who started the Linux kernel.
+ Git on a single machine without even having a network connection. Or you can use it as a server on a machine where you want to host your repository. And then you can use Git as a client to access the repository from another machine or even the same one.
+
+wHY is git so powerful?
+Because each contributor to a Git repo has a full copy of the repository, they can interact with the tracked files without needing a coordinating server. In turn, this improves collaboration.
+Because of the way Git was designed, repositories can be useful for any number of developers, from one to thousands.
+
+SCM(source control management) is the other name of Version Control System and there is other kind of vcs as 
+  -Subversion
+  -mercurial
+
+there more information here about git:
+  -https://git-scm.com/doc
+  -https://www.mercurial-scm.org/
+  -https://subversion.apache.org/
+  -https://en.wikipedia.org/wiki/Version_control
+
+
+--------installing git--------------------
+version: git --version
+install: apt install git or yarn install git
+One interesting thing about the Windows installation is that it comes preloaded with an environment called MinGW64. 
+This environment lets us operate on Windows with the same commands and tools available on Linux. 
+Running "git --version" in your computer will display the currently installed version of Git (if Git is installed on your computer).
+
+
+***************First step with git*****************
+ Let's start by setting some basic configuration. Remember when we said that a VCS tracks who made which changes, for this to work, we need to tell Git who we are. We can do this by using the Git config command and then setting the values of user.email and user.name to our email and our name.
+    eg: git config --global user.email "adEmail5@gmail.com"
+        git config --global user.name "myName"
+
+    rq: we use "--global" to specify that is for all the git respository
+
+ when we run "git init" we initialize an empty git repository in the current directory.
+    eg: Git innit 
+
+The "ls-la" command which lists files that start with a dot. 
+
+We can also use the "ls-l .git/" command to look inside of it and see the many different things it contains.
+
+So whenever you clone a repository, this git directory is copied to your computer. 
+Whenever you run "git init" to create a new repository like we just did, a new git directory is initialized. 
+The area outside the git directory is the working tree. The working tree is the current version of your project. 
+You can think of it like a workbench or a sandbox where you perform all the modification you want to your file. This working tree will contain all the files that are currently tracked by Git and any new files that we haven't yet added to the list of track files.
+
+-------What are the git directory and the working tree?-----
+The git directory acts as a database for all the changes tracked in Git and the working tree acts as a sandbox where we can edit the current versions of the files.
+
+To make Git track our file, we'll add it to the project using the "git add" command passing the file that we want as a parameter. 
+    eg: git add "fileName"
+
+With that, we've added our file to the "staging area". 
+The "staging area" which is also known as the "index" is a file maintained by Git that contains all of the information about what files and changes are going to go into your next command. 
+
+We can use the git status command to get some information about the current working tree and pending changes. Let's check that one out.
+    eg: git status 
+
+
+We see that our new file is marked to be committed, this means that our change is currently in the staging area. 
+To get it committed into the.git directory, we run the git commit command. 
+    eg: git commit 
+
+*******************Tracking files***************
+Files are suppose to have 3 states when it's tracking:
+    -Modified
+    -Staged
+    -Commited
+
+So, the next step is to stage those changes. When we do this, our modified files become stage files. In other words, the changes to those files are ready to be committed to the project. All files that are staged will be part of the next snapshot we take. And finally, when a file gets committed, the changes made to it are safely stored in a snapshot in the Git directory. 
+This means that typically a file tracked by Git, will first be modified when we change it in any way. Then it becomes staged when we mark those changes for tracking. And finally it will get committed when we store those changes in the VCS.
+
+--------What do we need to do after modifying a file tracked by Git?-----
+After modifying a file, we need to stage those changes and then commit them afterwards.
+
+
+***************The basic GIT Workflow****************
+ Basic commands:
+    -git init: innittialize the git respository
+    -git config -l: it'll give all the user configuration of the respository (email, name...)
+    -git add: Put your file ready to be tracked by git by move it in the stage status, 
+    -git add -p: Allows a user to interactively review patches to add to the current commit
+    -git status: it'll tell us the state of the file if it's ready to be satge and wait fot the next message
+    -git commit -m "messages": it'll take the stage file and add it to the database which represent here our vcs the git respository
+    -"git commit -a -m "messages"":making a small change and want to skip the staging step
+    -"git log": command used to display commit messages 
+    -"git log -p": It shows added lines with plusses and remove lines with dashes.
+    -"git log --stat":  This will cause git log to show some stats about the changes in the commit, like which files were changed and how many lines were added or removed.
+    -git show: Shows various objects
+    -"git diff -- staged": to see the changes that are staged but not committed. With this command
+    -"git diff" equivalent to the "diff -u" format: shows only unstaged changes by default. Is the extra lines that we've added
+    -"git add -p":This way we can detect if there's any changes that we don't want to commit.
+    -"git rm 'fileName'":  the file was deleted from the directory, and the change was also staged to be committed in our next commit.
+    -"git mv 'fileName' 'newNAmeFile'": The git mv command works in a similar way to the mv command on Linux and so can be used for both moving and renaming.
+
+
+
+"git mv 'fileName' 'newNAmeFile'": The git mv command works in a similar way to the mv command on Linux and so can be used for both moving and renaming.
+
+---When committing new files or changes with git commit, the user is asked to provide a commit message. What will happen if an empty commit message is entered?-----------
+    You can’t commit with an empty commit message.
+
+
+****************Anatomy of a Commit Message*************
+So the first line is usually kept to about 
+"50 characters or less." 
+
+The line contains a short description of what the commit changes are about. After the first line, comes an empty line, and the rest of the text is usually kept 
+"under 72 characters." 
+This text is intended to provide a detailed explanation of what's going on with the change. It can reference bugs or issues that will be fixed with the change. It can also include links to more information when relevant. The line limits can be annoying but they help in making the commit message be more digestible for the reader. 
+
+There's a git command used to display these commit messages called "git log". 
+
+Sometimes it can be tempting to just write something short like:
+    -update, 
+    -change or 
+    -fix 
+as the description of our commit messages. 
+
+"Don't do it". 
+
+It's super frustrating to go back to repositories history and discover that there's not enough context to understand what was changed and why. It takes only a few more seconds to write a better description. This can be invaluable down the line. Following these guidelines can help make your commit message really useful, and the investment of work now will really pay off later. 
+If you're interested in learning more about git commit style, there are plenty of resources out there to read including the Linux kernel documentation itself along with impassioned opinions from other developers.
+
+******************************************************************
+                    Second part :)
+******************************************************************
+
+*************Advanced git interaction*****************
+------------skipping the staging area----------
+ Instead, git commit -a is a shortcut to stage any changes to tracked files and commit them in one step.
+ If the modified file has never been committed to the repo, we'll still need to use git add to track it first(case of a new respository).
+
+ ------If we're making a small change and want to skip the staging step, which two flags do we need to add to the git commit command?-----
+    git commit -a -m "messages"
+
+**************Getting More Information About Our Changes*********
+"git log -p": It shows added lines with plusses and remove lines with dashes. Because the amount of text is now longer than what fits on your screen, Git automatically uses a paging tool that allows us to scroll using page up, page down, and the arrow keys. And exit out by pressing "q".
+
+The format is equivalent to the diff-u output command that we saw earlier.
+ 
+"git log --stat":  This will cause git log to show some stats about the changes in the commit, like which files were changed and how many lines were added or removed.
+
+------------If we want to see a specific commit, which command would we use along with the commit ID?------------
+Taking the commit ID, git show will show information about the commit and its associated patch.
+
+ "git diff -- staged": to see the changes that are staged but not committed. With this command
+
+ "git diff" equivalent to the "diff -u" format: shows only unstaged changes by default. Is the extra lines that we've added
+
+ "git add -p":This way we can detect if there's any changes that we don't want to commit.
+
+************Deleting and Renaming Files*****************
+"git rm 'fileName'":  the file was deleted from the directory, and the change was also staged to be committed in our next commit.
+
+"git mv 'fileName' 'newNAmeFile'": The git mv command works in a similar way to the mv command on Linux and so can be used for both moving and renaming.
+
+NB: After rename , move or delete the file will go in stage state and we have finally to commit changes.
+
+ If there are files that get automatically generated by our scripts, or our operating system generates artifacts that we don't want in our repo, we'll want to ignore them so that they don't add noise to the output of git status. 
+ To do this, we can use the "gitignore" file.
+    eg: -echo .ds_store > .gitignore //to add the .ds_store to the gitignore file
+        -git add .gitignore
+
+NB: HEAD is a symbolic reference pointing to wherever you are in your commit history. It follows you wherever you go, whatever you do, like a shadow. 
+
+******---------*******Undoing things******-----------******
+************Undoing Changes Before Committing***********
+" git checkout 'fileName'":checking out the original file from the latest storage snapshot. 
+
+-------What is the purpose of the git checkout command?------
+"git checkout": restores files to the latest stored snapshot, reverting any changes before staging.
+
+"gir checkout -p":  This will ask you change by change if you want to go back to the previous snapshot or not
+
+"git reset":remove changes from the staging area.
+
+"git reset -p":to get git to ask you which specific changes you want to reset.
+
+********************Amending Commits***************
+"git commit --amend" :git will take whatever is currently in our staging area and run the git commit workflow to overwrite the previous commit. 
+
+-------------What does the git commit --amend do?---------
+git commit --amend allows us to modify and add changes to the most recent commit. 
+
+NB: But you should avoid amending commits that have already been made public. 
+
+************************Rollbacks*******************
+"git revert HEAD": a new commit is created with inverse changes. This cancels previous changes instead of making it as though the original commit never happened.
+
+********************Identifying a Commit*****************
+The commit ID is the 40 character long string after the word commit.

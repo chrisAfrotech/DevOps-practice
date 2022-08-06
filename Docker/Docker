@@ -1,0 +1,58 @@
+*************Master docker(inspired by mosh Hamedani tutorial on docker for bigginer)********************
+
+
+******************What is docker********************
+Docker is a platform for building, running and shipping apllications in a consistent manner.
+
+
+****************Virtual machine vs container********
+Container: is an isolated environment for running an application 
+Virtual machine is an abstraction of a machine(Physical hardware)"using hypervisors(vmware, virtualbox)"
+
+********Architecture of docker**********************
+it use client server architecture
+server is call Docker engine  
+
+linux(linux container)
+windows(windows and linux container)
+Mac(linux virtualmachine to run linux container)
+
+****************Installing docker*******************
+   linux: sudo apt-get install docker.io
+
+*****************Development workflow***************
+	-Add dockerfile in the application to dockerise it!
+	-push the image file to the remote docker registery as docker hub
+	-pull it on any machine running docker for test and production
+
+******************Docker action**********************
+if we use normal method ou were suppose to:
+-start with an os
+-install node
+-copy app files
+-run node app.js
+
+But with using docker you wil package your application
+-open your directory
+-add "Dockerfile"
+-configure it: 
+	FROM node:alpine
+	copy . /app
+	WORKDIR /app
+	CMD node app.js
+
+-docker build -t hello-docker: in terminal to compile the app for production
+-docker image ls :to see the respository
+-Running on docker loacl machine: docker run hello-docker
+-add it to docker registery (docker hub)
+-pull it on the test or developement machine and run it
+
+ 
+**************Docker for ubuntu******************
+whoami: to know the type of user is active at the moment
+docker ps : to see the docker container started
+docker ps -a: to see stopped docker container files
+docker run it ubuntu: to run and start container with ubuntu
+
+
+https://app.slack.com/client/T03BR8QH1QA/C03BNC7QCE9

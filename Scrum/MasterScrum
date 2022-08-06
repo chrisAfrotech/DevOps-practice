@@ -1,0 +1,105 @@
+****************************PLAN***********************
+	What is Agile
+	What is scrum
+	Agile scrum master training
+ 	Scrum master role
+	Scrum methodology
+	Scrum Meeting
+	Scrum vs Kanban
+	Scrum interview Questions
+
+***********************what is agile?*******************
+  Agile is a set of methods and practices that focuses on iterative development 
+
+Advantages of using agile methodology:
+	-project follow a predifined schedule and have a predictable cost
+	-clients have visibility of esch phase of the project
+	-create interaction between the project team and the project
+	-Product output is predictable and can something happen earlier than expected
+	-high quality development testing and collaboration is ensured since the project broken down
+	-The product backlog can be refined and reprioritized
+	-The teams can maximize project value since clients can privide project priority
+	-The needs of the customers can be focused on, increasing the value delivred
+
+ Agile methodologies:
+ 	-SCRUM (the most used)
+ 	-kanban
+ 	-xp	
+ 	-lean 
+ 	-crystal
+
+******************What is scrum?**************************
+ Scrum is a framework that enables teams to work together
+
+Benefit of using scrum:
+	-Teams can provide project deliverables in an efficient manner
+	-times and money are used efficiently
+	-Project are delivered into smaller units call sprints
+	-Work best for fast moving projects
+	-scrum meetings provide the team great visibility
+	-Constantly involves feedback from clients and customers
+	-Making changes based on feedback are very easy
+	-Individual efforts of the team members are given focus
+
+
+Scrum TEAM: it involves 3 roles
+	-Product owner: 
+		Determining the product features prioritizing it into a list, what need to be focused on for the next sprint and constantly reprioritizing it and refining it 
+
+	-Scrum master:
+		Helpsteams learn and apply scrum to obtain business value. helps remove impediments,protect team from interference and helps to adopt agile practice
+
+	-Scrum team:
+		Collection of individuals that work together to deliver the requirements of the stakeholders
+
+
+
+Scrum ARTIFACTS (they are 3)
+	The are components of the srum process that can improve transparency and understanding of the work.
+	-Product Backlog
+		*New features
+		*changes to made to existing features
+		*Bug fixes
+		*Changes to the infrastructure and several other activities team needs to deliver to ensure particular outcome
+
+	-Sprint Backlog(subset of product backlog)
+		* Sprint refers to short period of time during which a scrum team aims to get amount of work done		
+
+		* contains task that the team aims to complete to satisfy the sprint goal(objective decided for the sprint as an outcome between prod owner and team)
+
+	-Product increment
+		Is  the combination of all product backlog tasks completed in a sprint and the value of increments of previous sprints
+
+**************Scrum FRAMEWORK**************
+									________________
+									|		sprint 		 |
+						----- |	Retrospective|<------------
+						|			|______________|						|
+						|												 -----	  |
+						|												|Daily|	  |
+_________		|												|scrum| 	|
+|				|		^												-------	  |
+|Product|	 |sprint |	|sprint |		|Scrum|  |Sprint||Increment|
+|Backlog|> |planing|> |Backlog|>  |teams|> |Review|>|   
+---------		 
+		 ^																				 |
+		 |_________________________________________|
+
+
+Product backlog: list of tasks to succesfully achieve the goal of the stakeholders
+
+Sprint plannig: team determines the tasks from product catalog they will work on and deliver during the sprint
+
+Sprint backlog:  tasks dicussing during script planning are then added to sprint backlog 
+
+Scrum team: (usualy of 5 to 9 members) work on the task in the sprint backlog
+ 
+Daily scrum:sessions of 15 minutes generally where the teams synchronize activities and plan what they achieve in the next 24hours
+
+Sprint review: it takes place after the sprint is completed. It involves the team, scrum master, product owner and stakeholders.
+
+
+increment: workable output is given to the stakeholders
+
+*****************Scrum Board********************
+it is a physical or virtual tool that helps team to visualize items in the sprint backlog 
