@@ -1,0 +1,45 @@
+Js moderne parceque en realite il existe des versions de javascript recentes qui nous permettent desormais de travailler plus efficacement notament (ES6, ES7, ES8, ES9, ES10, ES11) la derniere version uploader en 2020
+
+***********syllabus*************
+-Let and const
+-arrow function
+-Template litterals
+-Default parametter
+-Objects litterals
+-rest and spread operators
+-destructing asignement
+-class, modules, promises, iterators
+-await/sync
+-map and set
+
+Opportunites de js moderne 
+-app web
+-app de bureau
+-app backend
+-app mobile
+-app pour robot
+
+possibilite de maitriser des framework populaire
+-Reactjs & react native
+-Angular
+-Vuejs
+-Electronjs
+
+Les sondages sur stackoverflow en 2019 montre que Javascript est la meilleur technologie  populaire. Notamet en (programmation, scripping, markup langauge)
+
+Environements et extensions:
+-vscode
+-Live server(heberger ce que l'on va faire localement)
+-Material icon theme(pour la coloration des icones)
+-monokai pro(Embellir notre code js)
+
+Application des differentes extensions:
+-parameres -> color theme,  file icons theme 
+-creer notre premier dossier:
+    mkdir Jsmodern
+-creer nouveau fichier
+    touch index.html
+
+   
+
+********************Variables*************
