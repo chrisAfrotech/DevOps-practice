@@ -116,19 +116,25 @@ After modifying a file, we need to stage those changes and then commit them afte
     -git config -l: it'll give all the user configuration of the respository (email, name...)
     -git add: Put your file ready to be tracked by git by move it in the stage status, 
     -git add -p: Allows a user to interactively review patches to add to the current commit
-    -git status: it'll tell us the state of the file if it's ready to be satge and wait fot the next message
+    -git status: it'll tell us the state of the file if it's ready to be stage and wait fot the next message
     -git commit -m "messages": it'll take the stage file and add it to the database which represent here our vcs the git respository
     -"git commit -a -m "messages"":making a small change and want to skip the staging step
     -"git log": command used to display commit messages 
     -"git log -p": It shows added lines with plusses and remove lines with dashes.
+    -"git log -p -2": It shows added lines with plusses and remove lines with dashes for the last two commit.
     -"git log --stat":  This will cause git log to show some stats about the changes in the commit, like which files were changed and how many lines were added or removed.
+    -"git log 2": it'll show the last 2 commits we did 
     -git show: Shows various objects
     -"git diff -- staged": to see the changes that are staged but not committed. With this command
     -"git diff" equivalent to the "diff -u" format: shows only unstaged changes by default. Is the extra lines that we've added
     -"git add -p":This way we can detect if there's any changes that we don't want to commit.
     -"git rm 'fileName'":  the file was deleted from the directory, and the change was also staged to be committed in our next commit.
     -"git mv 'fileName' 'newNAmeFile'": The git mv command works in a similar way to the mv command on Linux and so can be used for both moving and renaming.
-
+    -"git checkout": restores files to the latest stored snapshot, reverting any changes before staging.
+    --"git checkout 'fileName'":checking out the original file from the latest storage snapshot.
+    -"git commit --amend" :git will take whatever is currently in our staging area and run the git commit workflow to overwrite the previous commit.
+    -"git revert HEAD": a new commit is created with inverse changes.
+    
 
 
 "git mv 'fileName' 'newNAmeFile'": The git mv command works in a similar way to the mv command on Linux and so can be used for both moving and renaming.
@@ -202,7 +208,7 @@ NB: HEAD is a symbolic reference pointing to wherever you are in your commit his
 
 ******---------*******Undoing things******-----------******
 ************Undoing Changes Before Committing***********
-" git checkout 'fileName'":checking out the original file from the latest storage snapshot. 
+"git checkout 'fileName'":checking out the original file from the latest storage snapshot. 
 
 -------What is the purpose of the git checkout command?------
 "git checkout": restores files to the latest stored snapshot, reverting any changes before staging.
@@ -219,10 +225,66 @@ NB: HEAD is a symbolic reference pointing to wherever you are in your commit his
 -------------What does the git commit --amend do?---------
 git commit --amend allows us to modify and add changes to the most recent commit. 
 
-NB: But you should avoid amending commits that have already been made public. 
+NB: But you should avoid amending commits that have already been made public when you are working in team on the same project. 
 
 ************************Rollbacks*******************
+"One morning before coffee, you make a few changes to one of these scripts and commit the updated files. A few hours later, you start to receive tickets from users indicating some part of the script is broken. From the errors they describe, it sounds like the problem is related to your recent changes. Oh, you could look at the code you updated to see if you can spot the bug. But more tickets are pouring in and you want to fix the problem as fast as possible. You decided it's time for a rollback"
+
 "git revert HEAD": a new commit is created with inverse changes. This cancels previous changes instead of making it as though the original commit never happened.
 
-********************Identifying a Commit*****************
+******************Identifying a Commit*****************
 The commit ID is the 40 character long string after the word commit.
+This long jumble of letters and numbers is actually something called a hash, which is calculated using an algorithm called SHA1. Essentially, what this algorithm does is take a bunch of data as input and produce a 40 character string from the data as the output. In the case of Git, the input is all information related to the commit, and the 40 character string is the commit ID. 
+
+---------Which of the following is NOT true about the SHA1 hash numbers that Git uses to identify commits?
+------------
+     Git can identify a commit using the first few hash numbers as long as there is only one matching possibility.
+
+There are some interesting considerations about how git object data is stored, such as the usage of sha-1. 
+
+Feel free to read more here:
+-https://en.wikipedia.org/wiki/SHA-1
+-https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/
+
+---------test---------
+Question 3
+What does Git use cryptographic hash keys for? //
+To guarantee the consistency of our repository
+
+*******************What is a branch?******************
+So what is a branch? What is it used for? 
+In Git, a branch at the most basic level is just a pointer to a particular commit. But more importantly, it represents an independent line of development in a project. Of which the commit it points to is the latest link in a chain of developing history. The default branch that Git creates for you when a new repository initialized is called master. 
+
+-----------What is the purpose of organizing repositories into branches?---------
+    By creating a new branch, we can experiment without breaking what already works.
+
+*******************Creating New Branches*************
+ We can use the git branch command to list, create, delete, and manipulate branches.
+
+ -"git branch branchName": to create a new branch
+ -"git checkout branchName": to switch to another branch
+ -"git checkout -b event-better-feature": git create a new branch call "event-better-feature" and switch to it.
+
+ ***********Working with Branches********************
+ ------How does git checkout switch branches?--------
+    By updating the working tree to match the selected branch.
+
+-"git branch -d branchName": to delete branch we don't need to
+
+*********************Merging*********************
+Merging is the term that Git uses for combining branch data and history together. We'll use the git merge command, which lets us take the independent snapshots and history of one Git branch, and tangle them into another.
+
+-------------What happens when we merge two branches?-----
+    Both branches are pointed at the same commit.
+
+Git uses two different algorithms to perform a merge, fast-forward and three-way merge. 
+The merge we just performed is an example of a fast-forward merge. This kind of merge occurs when all the commits in the checked out branch are also in the branch that's being merged. If this is the case, we can say that the commit history of both branches doesn't diverge. 
+
+-"git merge branchName": to merge the commit we had done by be on the branch we want to add on
+
+
+*************Merge Conflicts**************
+--------What's the advantage of Git throwing a merge conflict error in cases of overlap?-----
+     If two lines have differences Git is unsure about, it's best we decide than risk losing work forever.
+
+-"git merge --abort" : This will stop the merge and reset the files in your working tree back to the previous commit before the merge ever happened.

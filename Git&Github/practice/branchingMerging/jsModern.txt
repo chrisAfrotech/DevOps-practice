@@ -43,3 +43,6 @@ Application des differentes extensions:
    
 
 ********************Variables*************
+
+-------test for branching and merging------
+let's test it by doing
