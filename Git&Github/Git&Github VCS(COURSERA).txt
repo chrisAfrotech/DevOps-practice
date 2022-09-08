@@ -124,6 +124,7 @@ After modifying a file, we need to stage those changes and then commit them afte
     -"git log -p -2": It shows added lines with plusses and remove lines with dashes for the last two commit.
     -"git log --stat":  This will cause git log to show some stats about the changes in the commit, like which files were changed and how many lines were added or removed.
     -"git log 2": it'll show the last 2 commits we did 
+    -"git log --graph --oneline": display a summarized view of the commit history for a repo, showing one line per commit
     -git show: Shows various objects
     -"git diff -- staged": to see the changes that are staged but not committed. With this command
     -"git diff" equivalent to the "diff -u" format: shows only unstaged changes by default. Is the extra lines that we've added
@@ -232,6 +233,8 @@ NB: But you should avoid amending commits that have already been made public whe
 
 "git revert HEAD": a new commit is created with inverse changes. This cancels previous changes instead of making it as though the original commit never happened.
 
+"git revert 8d5a3189b88d273ef08286e5074b5e38d616da21": to revert to the earlier version of code.
+
 ******************Identifying a Commit*****************
 The commit ID is the 40 character long string after the word commit.
 This long jumble of letters and numbers is actually something called a hash, which is calculated using an algorithm called SHA1. Essentially, what this algorithm does is take a bunch of data as input and produce a 40 character string from the data as the output. In the case of Git, the input is all information related to the commit, and the 40 character string is the commit ID. 
@@ -270,6 +273,8 @@ In Git, a branch at the most basic level is just a pointer to a particular commi
     By updating the working tree to match the selected branch.
 
 -"git branch -d branchName": to delete branch we don't need to
+-"git branch -D <name>": Forcily deletes the branch
+
 
 *********************Merging*********************
 Merging is the term that Git uses for combining branch data and history together. We'll use the git merge command, which lets us take the independent snapshots and history of one Git branch, and tangle them into another.
@@ -287,4 +292,51 @@ The merge we just performed is an example of a fast-forward merge. This kind of 
 --------What's the advantage of Git throwing a merge conflict error in cases of overlap?-----
      If two lines have differences Git is unsure about, it's best we decide than risk losing work forever.
 
+-"git log --graph --oneline":display a summarized view of the commit history for a repo, showing one line per commit
+
 -"git merge --abort" : This will stop the merge and reset the files in your working tree back to the previous commit before the merge ever happened.
+
+----Question 1
+When we merge two branches, one of two algorithms is used. If the branches have diverged, which algorithm is used?-----
+    three-way merge
+
+********************************************************
+
+                        Third part :)        
+
+********************************************************
+
+*******************Working with Remotes*****************
+We'll first talk about what GitHub is and why it matters, and then we'll dive into how to work with GitHub and other remote repositories. Being able to use remote repositories allows us to effectively collaborate with others. Our collaborators can be sitting in the same office as we are or they can be thousands of miles away on a different continent working at a different time of day. Using a version control system like Git lets us incorporate the work of different people no matter where they are or when they're working. 
+
+*********************What is GItHub*********************
+Git is a distributed version control system. 
+
+Distributed means that each developer has a copy of the whole repository on their local machine.
+
+GitHub is a web-based Git repository hosting service. On top of the version control functionality of Git, GitHub includes extra features like bug tracking, wikis, and task management. 
+Other services that provide similar functionality are BitBucket, and GitLab.
+
+---------------Which best describe Github?-------------
+GitHub provides free access to a Git server for public and private repositories.
+
+***************Basic Interaction with gittHub*************
+-create respository (eg: Health-checks)
+-clone respository : git clone
+    rg: git clone "link of the remote respo"
+    NB: .md: means markdown
+-push it on the remote respository: 
+    git push
+
+-------After making changes to our local repository, how do we update the remote repository to reflect our changes?----------
+    The "git push" command gathers all the snapshots we've taken and sends them to the remote repository.
+
+You've probably noticed that we had to enter our password both when retrieving the repo and when pushing changes to the repo. 
+There are a couple ways to avoid having to do this. 
+One way is to create:
+    -an "SSH key pair" and store the public key in our profile so that GitHub recognizes our computer. 
+    -use a "credential helper" which caches our credentials for a time window so that we don't need to enter our password with every interaction. 
+
+Git already comes with a credential helper baked in. We just need to enable it. 
+We do that by calling: 
+    git config --global credential.helper cache
