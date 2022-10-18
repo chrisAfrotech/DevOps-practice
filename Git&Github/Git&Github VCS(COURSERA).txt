@@ -135,6 +135,16 @@ After modifying a file, we need to stage those changes and then commit them afte
     --"git checkout 'fileName'":checking out the original file from the latest storage snapshot.
     -"git commit --amend" :git will take whatever is currently in our staging area and run the git commit workflow to overwrite the previous commit.
     -"git revert HEAD": a new commit is created with inverse changes.
+    git commit --amend allows us to modify and add changes to the most recent commit.
+    -"git revert 8d5a3189b88d273ef08286e5074b5e38d616da21": to revert to the earlier version of code.
+    -"git checkout branchName": to switch to another branch
+    -"git checkout -b event-better-feature": git create a new branch call "event-better-feature" and switch to it.
+    -"git merge branchName": to merge the commit we had done by be on the branch we want to add on
+    -"git log --graph --oneline":display a summarized view of the commit history for a repo, showing one line per commit
+    -"git merge --abort" : This will stop the merge and reset the files in your working tree back to the previous commit before the merge ever happened.
+    -"git clone": clone respository 
+    -"git remote -v": to look at the configuration for that remote respository.
+    -"git remote show origin": to get even more information about our remote respository
     
 
 
@@ -340,3 +350,115 @@ One way is to create:
 Git already comes with a credential helper baked in. We just need to enable it. 
 We do that by calling: 
     git config --global credential.helper cache
+
+
+This can be useful for keeping your local workspace up to date.
+    -https://help.github.com/en/articles/caching-your-github-password-in-git
+    -https://help.github.com/en/articles/generating-an-ssh-key  
+
+***************What is a remote?*************
+-------What will happen if the master repository receives a major update since the last local copy was synced?----
+    If there are pending changes in the master branch, Git will let you know.
+
+HTTP is generally used to allow read only access to a repository.
+In other words, it lets people clone the contents of your repo without letting them push new contents to it. Conversely HTTPS and SSH, both provide methods of authenticating users so you can control who gets permission to push.
+
+****************Working with Remotes**************
+git remote -v: to look at the configuration for that remote respository.
+
+in some cases, you can have the fetch URL use HTTP for read only access, and the push URL use HTTPS or SSH for access control.
+
+Remote repositories have a name assigned to them, by default, the assigned name is "origin". This lets us track more than one remote in the same Git directory.
+
+"git remote show origin": to get even more information about our remote respository
+
+"git branch -r": To  have a look at the remote branches that our Git repo is currently tracking 
+
+-----If we want to make a change to a remote branch, what must we do?-------
+    We still have to go through the normal workflow to change remote branches.
+
+***************Fetching New Changes***************
+ Git doesn't keep remote and local branches in sync automatically, it waits until we execute commands to move data around when we're ready. 
+
+"git fetch": (Synced data) This command copies the commits done in the remote repository to the remote branches, so we can see what other people have committed.
+
+------What’s the main difference between git fetch and git pull?--------
+    git fetch fetches remote updates but doesn't merge; git pull fetches remote updates and merges.
+
+*************Updating the Local Repository************
+--------Assuming no merge conflicts, which type of merge does git pull perform automatically?----------
+    As long as there are no conflicts, Git will move the current branch tip up to the target branch tip and combine histories of both commits.
+
+"git remote update": to get the contents of remote branches without automatically merging any contents into the local branches
+
+***************The Pull-Merge-Push Workflow***********
+If we make change locally on some files it means it will go to unstage files then you commit it but what we have to do after the commit is to update your local project with the remote work because changes can be made there by another person you're working with and finally you'll "push" your local projec to merge it.
+
+------What should you do with the <<<<<<<, =======, and >>>>>>> conflict markers when resolving a merge conflict?----
+        
+Remove all of the conflict markers and only leave the code as it should be after the merge. because  Conflict markers aren’t required when resolving a merge conflict.
+
+*************Pushing Remote Branches**************
+------How do you switch to a new local branch?-------
+    git checkout -b <branch name>
+     The command git checkout -b <branch name> will first create a new branch and then switch to it.
+
+
+*************Rebasing Your Changes***************
+we mentioned that once our branch has been properly reviewed and tested, it can get merged back into the master branch. This can be done by us or by someone else. One option is to use the git merge command that we discussed earlier. Another option is to use the git rebase command
+
+Rebasing means changing the base commit that's used for our branch. 
+
+ when we create a branch at a certain point in the repo's history, Git knows the latest commit that was submitted on both branches. If only one of the branches has new changes when we try to merge them, Git will be able to fast forward and apply the changes. But if both branches have new changes when we try to merge, Git will create a new merge commit for the three way merge.
+
+ The problem with three way merges is that because of the split history, it's hard for us to debug when an issue is found in our code, and we need to understand where the problem was introduced. By changing the base where our commits split from the branch history, we can replay the new commits on top of the new base. This allows Git to do a fast forward merge and keep history linear.
+
+ ----------What does “git rebase refactor” do?---------
+    Move the current branch on top of the refactor branch
+     This makes debugging easier and prevents three-way merges by transferring the completed work from one branch to another.
+     
+
+**************Another Rebasing Example*****************
+git pull: will automatically create a three-way merge
+
+git fetch will put the latest changes into the origin slash master branch but we won't apply them to our local master branch.
+
+We see that we fetched some new changes. This means that if we tried to merge our changes, we end up with a three-way merge. Instead, we'll now run git rebase against our origin/master to rebase our changes against those made by our colleague and keep history linear.
+
+--------Generally, git rebase is an alternative to which command?-------
+   " Rebasing instead of merging rewrites history and maintains linearity, making for cleaner code. "
+
+*********Best Practices for Collaboration***********
+-It's a good idea to always synchronize your branches before starting any work on your own.
+
+-Avoid having very large changes that modify a lot of different things.
+ For example, if you are renaming a variable for clarity reasons, you don't want to have code that adds new functionality in the same commit. It's better if you split it into different commit. This makes it easier to understand what's going on with each commit.
+
+-When working on a big change, it makes sense to have a separate feature branch.
+
+-If you need to maintain more than one version of a project at the same time, it's common practice to have the latest version of the project in the "master branch" and a stable version of the project on a "separate branch".
+
+-You shouldn't rebase changes that have been pushed to remote repos.
+
+---------Which of the following statements is true regarding best practices for collaboration?-------
+     This way, when you start changing code, you're starting from the most recent version, minimizing chances of conflicts or the need for rebasing.
+
+-Having good commit messages is important.
+
+NB: important links
+    https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
+
+    You can also use git rebase branchname to change the base of the current branch to be branchname
+
+********************************************************
+
+                        fourth part :)        
+
+********************************************************
+
+***********Intro to Module 4: Collaboration***********
+If you're trying to learn a new technology, it's a great idea to practice your skills by contributing to a project that uses that technology.
+To do that, you'll need to know how to interact with the project. This includes how to send bug fixes, how to make sure that your fixes are applied, and even how to figure out which fixes are needed.
+
+*******A Simple Pull Request on GitHub*********
+
