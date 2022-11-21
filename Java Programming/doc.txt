@@ -1,0 +1,3 @@
+Java is a pseudo programming language which is compile.
+A class represente an entity that an be a concept or more
+Java is strongly typed programming language
