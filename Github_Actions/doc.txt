@@ -1,0 +1,18 @@
+*********************************************************
+	Mastering concept of github action for CI/CD pipeline
+*********************************************************
+Agenda: Github Actions 
+		Action & CI
+		CD & release management
+		Self-hosted runners
+		Build management
+		Package management
+		Secrets management
+
+The github actions workflow is made with 3 flows such as:
+	EVENTS --trigger--> workflows --use--> ACTIONS   
+	
+	-Events
+		.Github triggered events: Push, pull request, public
+	-workflows
+	-Actions
