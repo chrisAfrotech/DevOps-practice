@@ -4,10 +4,10 @@ class mainApp
    public static void main(String[] args){
     //Main is the principle funtion of the program
     //The signature (String[] args) is obligate in java
-    //Static signify that the function is accessible only here
+    //Static means that the function is accessible only here
     //Public means that th main is acessible every where in the program
-    //private is another type of access mode for which the class is not accessible
-    
+    //private is another type of access mode for which the class is accessible only in the class it was define
+
 
     System.out.println("Bonjour les design patterns!");
     //System (Always start with capital letter) is a native class of java

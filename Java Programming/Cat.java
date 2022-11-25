@@ -2,15 +2,15 @@ public class Cat
 {
     public Cat(String name, int age) //constructeur
     {
-        this.name = name;
-        this.age = age;
+        this.mName = name; //
+        this.mAge = age;
         
-        System.out.println(this.name + " & "+ this.age); //this refer to different object
+        System.out.println(this.mName + " & "+ this.mAge); //this refer to different object
 
     }
-
-    private String name;
-    private int age;
+    //those are attributes
+    private String mName;
+    private int mAge;
 }
 //An attribute is a variable that belong to a class
 //Method are things a class can do (functions)
