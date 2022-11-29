@@ -49,8 +49,8 @@ public class App
       Scanner sc = new Scanner(System.in);  
       System.out.println("Acces to with Level?");
 
-      int ganeLevel = sc.nextInt();
-      System.out.println("You are in level: " + ganeLevel);
+      int gameLevel = sc.nextInt();
+      System.out.println("You are in level: " + gameLevel);
 
        /*************Scanner************/
     }
