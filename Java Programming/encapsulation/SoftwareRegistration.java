@@ -27,6 +27,7 @@ public class SoftwareRegistration
     private int mExprirationYear; //variable of the class or instance var (Value can change form one object of the class to another)
     private static int mNUMBEROFREGISTRATION=5; //variable of class (have the same value for all the object of the class)
                                                 //Also don't need to instanciate the object before using it!!
+                                                
     public int getExprirationYear() 
     {
         return this.mExprirationYear ;
