@@ -1,0 +1,25 @@
+Structure of design pattern can be described as a graphical representation of the classes involved in the pattern foolowing the notations of OMT(object modeling technique).
+
+we have:
+-pattern name (describes the essence of the pattern in a short but expressive name.)
+-Intent (describes what the pattern does)
+-Also known as (list any synonyms of the pattern)
+-Motivation (provides and examples of the problem and the solution for it)
+-Structure (set of diagrams of the classes and objects that depict the pattern)
+-Participants (Describes the classes and objects that partici[ate in the design)
+-Collaborations (Describes the participants collaboration and thier responsibilities)
+-Consequences (Describes the forces that exist with pattern and the benefits)
+
+
+Types of design patterns are:
+-Creational design pattern
+    -Factory / virtual constructor
+    -Abstract Factory
+    -Singleton
+    -Prototype
+    -Builder
+    -Object pool
+-Structural design patterns
+-Behavioral design patterns
+-JEE Design patterns
+

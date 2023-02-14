@@ -5,7 +5,7 @@ class mainApp
     //Main is the principle funtion of the program
     //The signature (String[] args) is obligate in java
     //Static means that the function is accessible only here
-    //Public means that th main is acessible every where in the program
+    //Public means that the main is acessible every where in the programe
     //private is another type of access mode for which the class is accessible only in the class it was define
 
 

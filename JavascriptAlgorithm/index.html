@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm of fibonacci</title>
+</head>
+<body>
+   <h1 style="color: blue;font-size: medium;">Algorithm of fibonacci explain with Big-O complexity</h1>
+
+    <input style="height: 20px; color: blue; border-radius: 8px;" type text="text" id="texto" />
+    <input style="height: 30px; width: 80px;color: aliceblue; background-color: blue; border-radius: 8px;" type="button" id="btnEnter" value="Result" onclick="fibonacci(texto.value)" />
+
+    <p id="result"></p>
+
+<script>
+    var fibonacci = function (n) 
+    {
+        if (n==1) 
+        {
+            var fibo1 = [0, 1];
+            document.getElementById("result").innerHTML = fibo1;
+            console.log("Time complexity in o(1)")
+            return fibo1;           //Time complexity in o(1)
+        } 
+        else 
+        {
+            var fibo2 = fibonacci(n - 1);
+            for (let i = 2; i <= n; i++) {
+                fibo2[i] = fibo2[i-1] + fibo2[i-2]
+                document.getElementById("result").innerHTML =fibo2;  //Time complexity in o(n)
+            }
+            console.log("Time complexity in o(n)");
+            return fibo2;
+        }
+    };
+</script>
+</body>
+</html>
