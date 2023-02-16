@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recursive Palindrome</title>
+</head>
+<body style="margin: auto 0px; text-align: center;">
+
+    <h1>Enter Positive Integer Number</h1>
+
+    <input type="text" name="textbox" id="inputtxt"  onkeyup="CheckPalindrome()">
+    <input type="button" value="Check" id="btn" onclick="CheckPalindrome()">
+    <p id="result"></p>
+
+</body>
+    <script>
+        function CheckPalindrome () {
+            var str = document.getElementById("inputtxt").value;    //to put the number in a variable inputNumber
+            // remove non-alphanumeric characters and
+            // change the string to lowercase
+            str = str.replace(/[^a-z0-9]/i, '').toLowerCase();
+
+            // and get the length of the string
+            const len = str.length;
+
+            if (len <= 1){
+
+               return document.getElementById("result").innerHTML="Your Number Is Palindrome";
+            }
+            if (str[0] !== str[len - 1]){
+
+                return document.getElementById("result").innerHTML="Your Number Is not Palindrome";
+            }
+
+            // proper tail call optimized recursion
+            return CheckPalindrome(str.slice(1, -1));
+        }
+
+
+
+    if (temp == n)
+        document.getElementById("result").innerHTML="Your Number Is Palindrome";
+    else
+        document.getElementById("result").innerHTML="Your Number Is not a Palindrome";
+    </script>
+</html>
+
+

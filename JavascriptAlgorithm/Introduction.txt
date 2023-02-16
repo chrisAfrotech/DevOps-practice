@@ -105,3 +105,20 @@ For the basic case
 fact (0) = 1 
 fact(4) = 4*3*2*1 = 24
 
+///Look for the function factorial
+
+*****************Prime bumber*************************
+Problem: Give a natural number 'n' determine if the number is prime or not
+
+A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers
+eg: is prime(5) = true(1*5 or 5*1)
+	is prime(4) = false(1*4 or 2*2 or 4*1)
+
+********************Power of two*********************
+ Problem: Give a positive integer 'n', determine if the number is a power of 2 or not
+
+ An integer is a power of two if there exists an integer 'x' such that 'n'===2 
+
+
+******************Recursion******************
+Recursion is a problem solving technique where a function is calls itself
