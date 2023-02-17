@@ -121,4 +121,42 @@ eg: is prime(5) = true(1*5 or 5*1)
 
 
 ******************Recursion******************
+What is recursion?
 Recursion is a problem solving technique where a function is calls itself
+
+Why do we need it?
+A great technique to simplify your solution
+
+Few points about recursive problem:
+	-Recursive solution needs to have a base case, a condition to terminate the recursion
+	-Recursion might simplify solving a problem but it doesn't always translate to a faster solution 
+	-Recursive solution may be far worse compared to an iterative solution
+	-Recursion is a topic that is not the most straight foward to understand
+
+*****************Recursive Fibonacci*****************
+Problem: Given a number 'n', find the first 'n' elements of the Fibonacci sequence.
+
+****************Linear search*************
+A linear search is the simplest approach employed to search for an element in a data set.
+Problem: Given an array of 'n' elements and target element 't', find the indice of 't' in the array return -1 if the target of the element is not found.
+eg: [-5,2,10,4,6] ,t=10 should return 2  
+	[-5,2,10,4,6] ,t=6 should return 4
+
+****************Binary search algorithm**************
+Binary search, also known as half-interval search,[1] logarithmic search,[2] or binary chop,
+[3] is a search algorithm that finds the position of a target value within a sorted array.
+[4][5] Binary search compares the target value to the middle element of the array. If they are not equal, 
+the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value,
+and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.
+
+Problem: Given a sorted array of 'n' elements and target element 't', find the indice of 't' in the array return -1 if the target of the element is not found.
+nb: Binary search only works on sorted array 
+eg: [-5,2,4,6,10] ,t=10 should return 4 
+
+
+
+
+
+
+
+
