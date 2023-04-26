@@ -5,7 +5,7 @@ function primeNumber(n)
     }
     for (let i = 0; i <=Math.sqrt(n); i++) {
        if (n % i === 0) {
-         return false;
+         return false;          //-->O(sqrt(n))
        }
     }
     return true;

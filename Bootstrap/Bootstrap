@@ -1,0 +1,262 @@
+**************Perspective*************
+Use LIVE SEERVER to see in real time what you are doing without refresh the browser
+
+nb: You must follow the documentation to have elements up to date
+
+*****************Bootstrap*************
+Bootstrap is a framework HTML, CSS and js 
+
+**************Types of container************
+.container: which sets a max-width at each responsive Breakpoint
+.container-fluid: which is width:100% at all breakpoints
+.container-{breakpoint}: which is width:100% until the specified breakpoint
+
+************Size of screen************
+Breakpoint      Class infix     Dimensions
+Xsmall          sm              <576px
+Small           sm              >=576px
+Medium          md              >=768px
+Large           lg              >=992px
+ExtraLarge      Xl              >=1200px
+ExtraExt large  xxl             >=1400px
+
+*************Grid system***************
+in bootstrap you have in line budget of 12points (Maybe because it can be diveise in 2)
+
+col: column
+
+To have the number of element per lines i am suppose to divise 12/{number of elements} then the result is place in the html code
+    eg: col-md-6    means 12/2 = 6 so we have two elts per line for medium screen
+        col-lg-4    means 12/3 = 4 so we have two elts per line for medium screen
+
+NB: the scroll bar can affect the result you have in your viewport because it is include in the size when you reduce or increase the size of the viewport in your browser
+
+col-lg-6: will divise the screen in two parts equal
+
+**************Typographie************
+
+************Forms*************
+radio button: to make one choice at each time
+checkbox button: to make multiple choice
+switch button: to switch for true or false
+input : to enter message
+label : for the text of the input
+toggle button: to have different style when click or not
+range: to move circle on line to show step
+Floating label: to flaot text inside the input
+files input: to add file in form or multiple files
+form grid : to display input twice in column or not
+validation
+
+*************Buttons****************
+btn: for button
+    eg: btn-lg : to put the button more nig and his content too
+button outline: button with no color content
+button disabled: to make button unclickable
+button group: to have group of button (eg: for  )
+
+************Images/ icons**************
+bi: bootstrap icon
+
+Q&A:
+    Q:Quelle est la classe CSS à utiliser pour obtenir un container responsive à largeur fixe ? (c’est-à-dire qu’il y a une largeur fixe pour chaque catégorie de résolutions)
+    A: container
+
+    Q:Quelle est la classe CSS à utiliser pour obtenir un container qui prend toute la largeur ?
+    A:container fluid
+
+    Q:Quelles sont les classes CSS que je dois ajouter à mes éléments si je veux qu’ils soient disposés en 1 colonne sur téléphone, 3 colonnes sur tablette et 6 colonnes sur ordinateur?
+    A:col-sm-4 and col-md-2
+
+    Q:Quelle classe CSS doit-on utiliser pour obtenir une image en forme de rond (ou ellipse) ?
+    A: rounded-circle
+
+    Q:Quelles sont la ou les classes CSS à utiliser pour insérer une icône Bootstrap en forme de loupe (sur un bouton de recherche par exemple) ?
+    A:bi and bi-search
+
+*************Dropdowns button************
+Dropdowns
+right-aligned  menu
+left-align menu
+dropstart
+dropend
+dropup 
+
+*************progress bar****************
+animated stripes: for adding annimation trace
+
+**************Tooltips******************
+small animation maked when we put mouse on component and then showing text or descrition in bubble
+
+ we have first to enable it first with the script
+Tooltip on top
+Tooltip on right
+Tooltip on left
+Tooltip on right
+
+data-bs-html: to customize the content of the tootip with html
+
+***************Modals************
+Modals ot pop up or dialog 
+
+scrolling content
+static backdrop: modal will not been display none when we cick outside of it but it ll increase in scale
+vertically centered: to put the modal in the centered
+
+******************Navbar***********
+fixed-top: to put it static on top
+sticky top: to put others element at the following of the navbar
+
+****************Scrollspy**********
+ScrollSpy Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
+
+nb: you must have the body in position relative
+
+**************Components************
+Accordion: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+
+Alerts: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+
+Badge: Documentation and examples for badges, our small count and labeling component.
+    eg: for counting notifications
+
+Breadcrumb: Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+
+Card: Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.
+    eg: card for team member contact
+
+Caroussel: A slideshow component for cycling through elements—images or slides of text—like a carousel.
+
+close-button: A generic close button for dismissing content like modals and alerts.
+
+Collapse: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
+
+Modal: Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+
+Offcanvas: Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.
+
+Pagination: Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
+
+Placeholders: Use loading placeholders for your components or pages to indicate something may still be loading.
+
+Popovers: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+
+Progress: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+
+Spinners: Indicate the loading state of a component or page.
+
+Toasts: Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
+
+Tooltips: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
+    nb: to make tooltips working we must activate it with javascript
+
+Quizz:
+    Q:Quelle classe CSS doit on donner à l’élément qui va ouvrir et fermer notre liste déroulante lorsque l’on clique dessus ?        A:dropdown-toggle
+
+    Q: Quelles sont les classes CSS à utiliser pour rajouter des rayures qui bougent à une progress bar (barre de progrès) ?
+    A: progress-bar-stripped and progress-bar-animated
+
+
+************************Portfollio****************
+*************project*****************
+
+/////DONE////
+
+**********Hebergement nom de domaine et mettre un site en ligne*********
+
+**mise en place du pack hebergement**
+go to the web site: 
+https://www.weendo.com
+    NB: les hebergements de la plateforme Weendo incluent automatiquement un certificat ssl cad que l'acces a votre site sera securise avec https.
+*****mise en place du pack d'hebergement******
+Comment le configurer:
+    nb: nom de domaine vaux 15eur/an
+        sous domaine gratuit
+
+Le nom de domaine n'est accessible que 48hrs apres commande!
+
+/********************ftp et fizzela****************/
+Intsall filezilla
+
+
+/*********Allias****************/
+il va se comporter comme un clown de notre site!
+    eg: chris.com : domain name
+        christopher.net :allias will show the same content as the domain
+
+
+/***********Redirections***********/
+it will help to redirect your domain name to your target domain name
+    eg: i redirect chris.com -> christopher.net
+        when i will type chris.com i will automatically redirect to christopher.com
+
+/**********Email personnalise*********/
+we can create personnalise mail as :
+chris.klymb.com
+
+/***********Redirections Email*************/
+it will help to redirect your mail name to your target mail name
+    eg: i redirect chris.klymb.com -> christopher.klymb.net
+        when i will write to chris.klymb.com mail i will automatically redirect to christopher.klymb.net
+
+
+    QA:
+        Q: A quoi sert filezilla?
+        A: A envoyer des fichiers sur notre serveur
+
+        Q: comment dois je nommer mon fichier html pour que il puisse directement etre lu par mon serveur?
+        A: index.html
+
+        Q:Quelle est l’expression qui correspond à un sous-domaine ?
+        A:Project.chris.com
+
+        Q: Est-ce que je peux créer des sous-domaines de sous-domaines ?
+        A: yes
+
+        Q: Je souhaite rediriger automatiquement tous les utilisateurs de mon site vers ma page Facebook. Est-ce possible ?
+        A: yes
+
+
+
+
+
+/*********Developpeur freelance***************/
+Inscrivez-vous sur différentes plateformes de freelance :
+
+https://www.hopwork.fr
+https://www.upwork.com
+https://www.404works.com/
+https://www.freelancer.com
+https://www.codeur.com/
+http://www.trouvemoiunfreelance.com/
+
+/**********Agences de placements***************/
+Ce sont des entreprises qui s’occupent de trouver des missions pour vous en échange d’une commission.
+
+https://www.comet.co/
+https://www.easypartner.fr/
+
+
+/*************Connaitre la demande sur le marche************/
+Pour savoir ce qui est en demande sur le marché du travail, rien de plus simple.
+
+Consultez les sites d’emplois, par exemple :
+http://www.monster.fr/
+https://www.keljob.com
+http://jobprod.com/
+https://remixjobs.com/
+http://www.lesjeudis.com/
+http://www.urbanlinker.com/offresdemploi/
+
+Si vous lisez les descriptions des postes à pourvoir, vous allez voir plusieurs mots clés de technologies ou frameworks qui reviennent.
+
+/*****************Travailler en entreprise de chez soi***********/
+– Soit vous trouvez une entreprise qui accepte cela, il y a même des sites spécialisés pour trouver ce genre d’entreprise. Par exemple :
+
+https://weworkremotely.com/
+https://remoteok.io/
+http://www.workingnomads.co/
+http://www.remoteworking.co/
+
+
+

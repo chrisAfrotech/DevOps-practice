@@ -6,7 +6,7 @@ function powerOfTwo(n){
         if (n % 2 !== 0) {  
             return false
         }
-        n = n/2            //--> O(log(n)) because n is divided by two each times
+        n = n/2            //--> O(log(n)) because n is divided by two each times 
     }
     return true;
 } 

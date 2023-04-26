@@ -151,12 +151,187 @@ and repeating this until the target value is found. If the search ends with the 
 
 Problem: Given a sorted array of 'n' elements and target element 't', find the indice of 't' in the array return -1 if the target of the element is not found.
 nb: Binary search only works on sorted array 
-eg: [-5,2,4,6,10] ,t=10 should return 4 
+eg: [-5,2,4,6,10] ,t=10 should return 4.
 
+******************Sorting Algorithm******************
+Bubble sort
+Insertion sort
+Quick sort
+Merge sort
 
+******************Bubble sort************************
+Problem:Given an array of integers sort the array
+Const arr = [-6, 20, 8, -2, 4]
+Bubble sort (arr) => [-6, -2, 4, 8, 20]
 
+Principle: 	-In bubble sort algorithm we compare adjacent elements in the array and swap the positions if they are not in the intended order
+			-Repeat the instruction as you step throught each element in the array
+			-Once you step through the whole array with no swaps, the array is sorted
 
+Eg:[-6 20 8 -2 4]
+[-6 20 8 -2 4] -> [-6 8 20 -2 4] swap since 20 > 8
+[-6 8 20 -2 4] -> [-6 8 -2 20 4] swap since 20 > -2
+[-6 8 -2 20 4] -> [-6 8 -2 4 20] swap since 20 > 4
+End of an array. Elements Swapped?Yes?Repeat the comparison
+[-6 8 -2 4 20]
+[-6 8 -2 4 20] -> [-6 -2 8 4 20] swap since 8 > -2
+[-6 -2 8 4 20] -> [-6 -2 4 8 20] swap since 8 > 4
+[-6 -2 4 8 20]
+End of an array. Elements Swapped?Yes?Repeat the comparison
+[-6 -2 4 8 20] [-6 -2 4 8 20] [-6 -2 4 8 20] [-6 -2 4 8 20]
+End of an array. Elements Swapped? No? Array is sorted
+ 
+****************Insertion sort*********************
+Problem:Given an array of integers sort the array
+Const arr = [-6, 20, 8, -2, 4]
+Inserion sort (arr) => [-6, -2, 4, 8, 20]
 
+Principle: 	-Virtually split the array into a sorted and an unsorted part
+			-Assume that the first element is already sorted and remaining elements are unsorted
+			-Select an unsorted element and compare with all elements in the sorted part
+ 
+ Eg: Consider the array: [-6 20 8 -2 4], NTI:number to insert, SE:
+ [-6 20 8 -2 4] NTI:20 | SE:-6 | -6>20? no. Place 20 to the right of -6
+ [-6 20 8 -2 4] NTI:8 | SE:20 | 20>8? yes. shift 20 to the right.
+ [-6 20 20 -2 4] NTI:8 | SE:-6 | -6>8? no. Place 8 to the right of -6
+ [-6 8 20 -2 4] NTI:-2 | SE:8 | 20>-2? yes. shift 20 to the right 
+ [-6 8 20 20 4] NTI:-2 | SE:8 | 8>-2? yes. shift 8 to the right
+ [-6 8 8 20 4] NTI:-2 | SE:-6 | -6>2? no. Place -2 to the right of -6
+ [-6 -2 8 20 4] NTI:4 | SE:20 | 20>4? yes shift 20 to the right
+ [-6-2 8 20 20] NTI:20 | SE:-6 | -6>20? no. Place 20 to the right of -6
+ [-6 -2 8 8 20] NTI:4 | SE:8 | 8>4? yes. shift 8 to the right
+ [-6 -2 8 8 20] NTI:20 | SE:-6 | -2>4? no. Place -4 to the right of -2
+ [-6 -2 4 8 20] 	Array is sorted
 
+*********************Quick sort*********************
+Problem:Given an array of integers sort the array
+Const arr = [-6, 20, 8, -2, 4]
 
+Principle:	.Identify the pivot elemennt in the array
+				-Pick first element as pivot
+				-Pick last element as pivot(Our approach)
+				-Pick a random element as pivot
+				-Pick median as pivot 
+			.Put everything that's smaller than the pivot into the 'left' array and everything that's greater than the pivot into a 'right' array
+			.Repeat the process for the individual 'left' and 'right' arrays till you have an array of length 1 which is sorted by definition
+			.Repeadly concatenate the left array, pivot and right array till one sorted array remains
+
+eg: Consider the array: [-6 20 8 -2 4] pivot = 4: the last element
+[-6 -2] ['4'] [8 20]  	['nbr']: pivot element at each time
+[-6] ['-2'] [ ]		[8] ['20'] [ ]
+Merging of sub array
+[-6 -2] 	[8 20]
+Fusion with the fisrt pivot 
+[-6 -2]	[4]	[8 20]
+Finally merge:
+[-6 -2 4 8 20]
+
+*********************Merge sort**********************
+Problem:Given an array of integers sort the array
+Const arr = [-6, 20, 8, -2, 4]
+
+Principle:	-Divide the array into sub arrays,each containing only one element(An array with one element is consider sorted)
+			-Repeatedly merge the sub arrays to produce new sorted sub arrays until there is only one sub array remaining. That will be sorted array.
+
+eg: Consider the array: [-6 20 8 -2 4]
+[-6 20]		[8 -2 4]
+[-6] [20]	[8] [-2 4]
+[-6] [20]	[8] [-2] [4]
+Merge individual sub array into new array by checking if elements are sorted
+[-6 20]	[8] [-2 4]
+[-6 20]	 [-2 4 8]
+[-6 -2 4 8 20]
+
+If we take the case of the second part of the array we will have:
+[8 -2 4]
+[8] [-2 4] => [] left and right are not empty -2<8
+[8] [4] => [-2] left and right are not empty 4<8
+[8] [] => [-2 4] Right is empty. Push left array
+[ ] [ ] => [-2 4 8] both array are empty and we have the sort array
+
+//problem: After calculating marks of the reporcard of some students your aunt asked you. She also asked you to sort all years of born of those student in order so that she will known the avrage of students who are working hard. 
+Those average are intger in disorder, sort it to help your aunt.
+ 
+******************Misc problems*******************
+Cartesian product
+Climbing staricase
+Tower of hanoi
+
+****************Cartesian product*****************
+problem: Given two finite non empty sets find thier cartesian product
+In matchematics, the cartesian product of two sets A and B, denoted A x B is the set of all ordered pairs(a,b) where a is in A and b is in B 
+eg: const A = [1 ,2]
+	const B = [3, 4]
+	AxB = [[1,3],[1,4],[2,3],[2,4]]
+
+*************Climbing staircase*****************
+problem: Given a staircase of 'n' steps, count the number of distinct ways to climb to the top.
+You can either climb 1 step or 2 steps at a time
+
+n=1, climbingStaircase(1) =1 | 1
+n=2, climbingStaircase(2) =2 | (1,1) and (2)
+n=3, climbingStaircase(3) =3 | (1,1,1) (1,2) and (2,1)
+n=4, climbingStaircase(4) =5 | (1,1,1,1) (1,1,2) (1,2,1) (2,1,1) and (2,2)
+...
+
+Climbing stairacase approach:
+-At any given time you can climb either 1 step or 2 steps
+-If you have to climb to step 'n', we can only climb from step 'n-1' or 'n-2'
+-Calculate the ways we can climb to 'n-1' and 'n-2' steps and add the two 
+-ClimbingStaircase(n) = climbingStaircase(n-1) + climbingStaircase(n-2)
+
+******************Tower of HANNOI**************
+Problem: Move the entire stack of the puzzle to the last rod 
+
+Rules:
+-Only one disk may be moved at each time
+-Each move consists of taking the upper disk from one of the stacks and placing it on top of the another stack or an empty rod 
+-No disk may be placed on top of a disk that is smaller.
+
+It can be traduce mathematically as:
+-shift 'n-1' disk from 'A' to 'B' using 'C' (when required)
+-shift last disk from 'A' to 'c'
+-shift 'n-1' disk from 'B' to 'C' using 'A' (when required)
+
+*******************Recap******************
+Algorithm design techniques: which are the general approach to implement algorithm
+	-Brute force: Simple and exhaustive technique that evaluates every possible outcome to find the best solution
+		eg: Linear search
+	-Greedy approach: Choose the option at the current time, without any consideration for the future 
+		eg: Djikstra's ,prim's and kruskal algorithm
+	-Divide and conquer: Divide the problem into smaller sub problems. Each sub-problems is then solved and the partial solutions are recombined to determine the overall solution.
+		eg: Binary search, Quick sort, Merge sort, Tower of hanoi
+	-Dynamic programming: Divide the problem into sub-problems, Break it down into smaller but overlapping sub problems. Store the result and reuse it for the same sub-problems.
+	This is called Memorization technique that improves the time complexity of your algorithm.
+		eg: Fibonacci numbers and climbing staircase
+	-BackTracking: Generate all possible solutions. Check if the solution satisfies all the given constains and only then you proceed with generating subsequence solutions. If the constains are not satisfied, backtrack and go on a different path to find the solution 
+		eg: N-queens problem
+
+*******************Introduction************
+What is datastructure?
+	Datastructure is the way to store and organize data so that it can be used efficiently.
+
+Why learn datastructure?
+	-Almost every application we build involves data that is modelled in a certain way
+	-To efficiently manage taht data, you need data structure
+	-The difference between a function taking a few miliseconds vs few seconds or even minutes comes down to the selection of the right data structure
+	-Datastructure help you to solve problems in a more efficient way, both in terms of time and memory
+	-Learning about data structures also help you again a more prog=found understanding of things you're already aware of
+		eg:	-DOM: tree data structure
+			-Broser back and foward: stack data structure
+			-OS job scheduling: Queue data structure
+
+*******************Array**************
+An array is a data structure that can hold a collection of values
+	-Arrays can contain a mix of different data types. You can store strings, booleans, numbers or even objects all in the same array
+	-Arrays are resizable. You don't have to declare the size of an array before creating it!
+	-Javascript arrays are ZERO-indexed and the insertion order is maintained the the last element is (n-1)
+	-Arrays are iterables. They can be used with a for of loop
+	
+****************Object*****************
+An object is an unordered collection of key-value pairs. The key must either be a string symbol data type where as the value can be of any data type.
+To retreive a value, you can use the corresponding key. This can be achieved using the dot(.) notation or bracket
+
+An object is not an itarate. You cannot use it with a for loop
+	
 

@@ -1,47 +1,62 @@
-<!DOCTYPE html>
-<html>
+<!Doctype html>
+<html lang = "en">
+
 <head>
-<title>Recursive Palindrome</title>
-</head>
-<body style="margin: auto 0px; text-align: center;">
-
-    <h1>Enter Positive Integer Number</h1>
-
-    <input type="text" name="textbox" id="inputtxt"  onkeyup="CheckPalindrome()">
-    <input type="button" value="Check" id="btn" onclick="CheckPalindrome()">
-    <p id="result"></p>
-
-</body>
-    <script>
-        function CheckPalindrome () {
-            var str = document.getElementById("inputtxt").value;    //to put the number in a variable inputNumber
-            // remove non-alphanumeric characters and
-            // change the string to lowercase
-            str = str.replace(/[^a-z0-9]/i, '').toLowerCase();
-
-            // and get the length of the string
-            const len = str.length;
-
-            if (len <= 1){
-
-               return document.getElementById("result").innerHTML="Your Number Is Palindrome";
-            }
-            if (str[0] !== str[len - 1]){
-
-                return document.getElementById("result").innerHTML="Your Number Is not Palindrome";
-            }
-
-            // proper tail call optimized recursion
-            return CheckPalindrome(str.slice(1, -1));
-        }
-
-
-
-    if (temp == n)
-        document.getElementById("result").innerHTML="Your Number Is Palindrome";
-    else
-        document.getElementById("result").innerHTML="Your Number Is not a Palindrome";
-    </script>
-</html>
-
-
+	<title> Palindrome Program in JavaScript </title>
+	<style>
+	h1 {
+	text-align: center;
+	padding: 30px;
+	background-color: skyblue;
+	color: white;
+	}
+	
+	.palindrome {
+	margin: auto;
+	width: 40%;
+	border: 3px solid gray;
+	border-radius: 5px;
+	padding: 30px;
+	}
+	
+	#palindrome {
+	width: 100%;
+	border: 3px solid gray;
+	border-radius: 5px;
+	padding: 6px;
+	}
+	</style>
+	
+	</head>
+	
+	<body>
+		<h1> Palindrome Program in JavaScript </h1>
+		<div class="palindrome">
+		<label> Enter any string or number : </label> <br> <br>
+		<input id= "palindrome"> <br> <br>
+		<button type = "button" onclick = "palindrome()" > Check </button>
+		</div>
+		</body>
+		</html>
+		
+		<script>
+		function palindrome() {
+		var a, b, no, temp = 0;
+		no = Number(document.getElementById ("palindrome").value);
+		b = no;
+		while (no > 0)
+		{
+		a = no % 10;
+		no = parseInt( no / 10);
+		temp = temp*10 + a;
+		}
+		if (temp == b)
+		{
+		alert( "It is a Palindrome Number");
+		}
+		else
+		{
+		alert ("it is not a Palindrome Number");
+		}
+		}
+		</script>
