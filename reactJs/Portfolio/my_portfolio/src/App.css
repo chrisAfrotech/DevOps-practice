@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+/*********Roboto condesended *******/
+@import url('https://fonts.cdnfonts.com/css/roboto-condensed');
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*******************Navbar**************/
+.logo{
+  width: 8.25rem;
+}
+
+/*----------Menu links------------*/
+nav a.nav-link {
+  font-weight: 0.8rem;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+}
+
+nav ul li{
+  text-transform: uppercase;
+}
+
+:root{
+  --primary-white: #fff;
+  --primary-orange: #f9ab00;
+  --primary-dark: rgba(255, 255, 255, 0);
+}
+
+.navbar-nav > li > a{
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--primary-white) !important; /**we overwrite the color for bootstrap*/
+  border-bottom: 0.1875rem solid var(--primary-dark);
+}
+.margin-brand{
+  max-width: 8.25rem;
+  padding: 0;
+  height: 6ren;
+}
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus{
+  border-bottom: 0.1875rem solid var(--primary-orange);
+}
+.navbar-nav > li > a:hover {
+  border-bottom: 0.1875rem solid var(--primary-orange);
+}
