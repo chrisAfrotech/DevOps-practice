@@ -1,0 +1,124 @@
+/*************What is reactjs***************/
+-React is a client-side javascript library
+-It's all about building modern, reactive user interfaces for the web
+    eg: Netflix was buil with react
+
+    Mobile apps and desktop apps feel very "reactive": things happen instantly, you don't wait for a new oages to load or actions to start
+
+/*****************wHY REACT?**************/
+Very simple in surface than the other concurent (differenciate state to view)
+React has a great audience and community which maitain it up to date 
+Syntaxe jsx: which is a small extension for javascript
+Most popular framework 
+React use the Single Page Application (SPA) approach where server only sends one Html PAGE thereAfter react takes over controls the ui
+
+
+/*************Set up the development environment*********/
+Install nodejs 
+npm init: to setup the project by creating the package.json file
+npm install: to install dependencies we need for the project
+    -npm install react react-dom --save (to tell react it is all production dependencies)
+    -npm install webpack webpack-dev-server(which is a server running our app) babel-loader(to transform es6 code to es5) babel-preset-es2015 babel-preset-react babel-preset-stage-2 --save-dev
+
+in the configurating of the json package.json we can configure the port also in the 
+"Build script": --pot 5000 or another to setup the port of production in the browser
+
+Normally we have to use:
+create react app: which is a tool provide by facebook to create react app directly by default without taking care of configuaration
+
+But there is another way to create a React App without using the "create react app"
+
+/**********Reusable components**********/
+we must:
+create a new folder: components
+create file which is the components and write code of it inside
+call it in the render taget file
+
+/******Parse data into components********/
+to doing that we must use context called props
+
+NB: all text write in html code for jsx file is treated by react as a plain text, but we can also tell reat to don't treat it as a plain text by using dynamic expression
+    eg: {props.txt}
+
+/**********Handling events*********/
+to make it with react we have to make a declarative approach bu adding attributes to the elements
+
+
+/********Adding more components*******/
+In Jsx we have the possibilities to write self single close div components if there is not value
+    eg: <div class="danse" />
+
+/*******Introducing state********/
+    What is state?
+        it's the data which is manipulated and reflected by your running program 
+    State are very important to change what we see on the screen dynamically 
+/********Event props*********/
+props are very important to buil reusable components 
+
+/**********Adding routing***********/
+ Routing will help to show when page should be loaded
+
+npm install react-router-dom: to adding routinf functionality to react app by refreshing without fetching new html Page
+
+
+/********Adding links and navigation*********/
+
+
+/******Css modules********/
+
+
+/*******Outputing list*********/
+
+
+
+/*******Adding more components*********/
+
+
+/******props children************/
+
+
+
+/*******Adding a form********/
+
+
+/*******Getting user input and handling properties************/
+
+
+/********Preparing the app for http************/
+
+
+/*********Sending post request**********/
+
+
+/*********Navigating programmatically***********/
+
+
+/**********Getting started with fetching data***********/
+
+
+/*******use effects***********/
+
+
+/**********Introducing react context*************/
+
+
+/**********context logic & different ways of updating state************/
+
+
+
+/**********Using context in components*********/
+
+
+/**********More context usage**********/
+
+
+/***********Summary**************/
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+/************Master database in SQL by codeWithMoash***************/
+
+/*****************Getting started****************/
+1.Introduction
+	Spaelling: SQUEL
+
+2.What is SQL:
+A database is a collection of data stored in a format that can easily be accessed
+A DBMS (database management system)
+
+	Relational database
+		SQL
+
+	Must used RDBMS: 
+		-Mysql*
+		-sql server
+		-oracle
+
+
+	NoSql(non relational database)
+		Nosql dont understand SQL
+3,4- Installation of MYsql Workbench:
+	link: https://dev.mysql.com/downloads/workbench/
+	or you can downlodad it directly from ubuntu software
+
+5-Creating the database:
+	overview of the interface of Mysql workbench
+
+6-What we'll learn:
+	-Retrieving data
+	-Insering data
+	-Updating data
+	-Deleting data
+	-----------------------
+	-Summarizing data
+	-Writing complex querries
+	-Built in functions
+	-Views
+	-stored procedures
+	-----------------------
+	-Triggers
+	-Events
+	-Transactions
+	-Concurency
+	-----------------------
+	-Designing database
+	-Indexing for high performance
+	-Securing databses
+
+/*****************Retrieving data from a single table**************/
+1. Select statement:
+

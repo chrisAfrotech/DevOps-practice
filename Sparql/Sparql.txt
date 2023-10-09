@@ -1,0 +1,165 @@
+/****************SPARQL TUTORIAL introduction*************/
+Sapql is the standard querry language for querrying link data knowledge graph.
+    It's a little similar to SQL but SQL is of course use for relational data.
+    iT'S ALLOW YOU to querrying multiple database different from SQL with querry only one database 
+    It's compose of 4 different form querry language such as: 
+        -ASK
+        -CONSTRUCT
+        -DESCRIBE
+        -SELECT
+
+  /--------ASK----------/
+  Here you can ask a yes or no question
+    graph --> y/n
+  /---------CONSTRUCT--------/
+  it transform a knowledge graph to a new knowledge graph
+    graph --> graph
+    /------------DESCRIBE--------/
+    Not really use in productivity
+        Iris --> graph
+    /--------Select-------/
+    it return you a table. from knowledge graph to 
+        graph --> table
+
+/*************Select querry*********/
+Concepts in select querry:
+--------------------
+table   ||  SPARQL
+--------------------
+column  ||  variable
+cell    ||  binding
+row     ||  result
+
+PROLOGUE: 
+    Declarations use throughout the querry
+
+PROJECTION:
+    Specifies the variables that make up the columns of the table
+
+PATTERN:
+    Specifies the bandings that make up the cells of the table
+
+MODIFIER:
+    Performs operations on the rows of the table 
+
+eg: 
+select ?s ?p ?o{    #projection(colums)
+    ?s ?p ?o        #pattern(cells)
+} limit 10          #modifiying (rows)
+
+s: subjest term
+p: predicat term
+o: object term
+
+
+select querry always returns a table
+
+/*********tripple querry**********/
+eg:
+    select ?pokemon ?color{
+        ?pokemon <https:.../color> ?color
+    }
+    limit 10
+
+/************Bind*********/
+	select ?pokemon ?color ?greeting{
+        ?pokemon <https:.../color> ?color
+        bind("Hi!" as ?greeting)
+    }
+    limit 10
+
+
+/*********Group patterns*********/
+ select ?color ?cry ?name ?type1 ?type2{
+        ?pokemon <https:.../color> ?color
+        ?pokemon <https:.../cry> ?ccry
+        ?pokemon <https:.../color/#label> ?type1
+        ?pokemon <https:.../color/#label> ?type2
+    }
+    limit 10
+
+/*********Iri abreviations*********/
+	prefix vocab: <https://..../vocab>
+	select ?color ?cry ?name ?type1 ?type2{
+	        ?pokemon vocab:color ?color
+	        ?pokemon vocab:cry ?ccry
+	        ?pokemon vocab:#label ?type1
+	        ?pokemon vocab:color/#label ?type2
+	    }
+	    limit 10
+
+to know how to split it we have to cut it ecxactly wher:
+	-At the biginning of #	eg: ...#eru
+	-At the end of  the last world of the iri: eg: .../food
+
+There is another way to write iri abreviations again as:
+	
+	base <https://..../vocab>
+	select ?color ?cry ?name typename{
+			?pokemon <color> ?color
+	        ?pokemon <cry? ?ccry
+	        ?pokemon vocab:#label ?type1
+	        ?pokemon vocab:color/#label ?type2
+	}
+
+Iri abreviation can be finally summarise as:
+
+Notation		Example
+-----------------------------------------------------------
+Absolute iri 	<https://wwww.w3.org/1922/02/23/22-rdf-ns#type>
+Relative iri 	<type> (requires base)
+Prefixed iri 	ref:type (requires prefix)
+type iri 		a (only in predicated position)
+
+
+/***************Group pattern abreviations**********/
+prefix vocab: <https://..../vocab>
+	select ?color ?cry ?name ?type1 ?type2{
+	        ?pokemon vocab:color ?color
+	        ?pokemon vocab:cry ?ccry
+	        ?pokemon vocab:#label ?type1
+	        ?pokemon vocab:color/#label ?type2
+	    }
+	    limit 10
+
+For the repeated ?pokemeon variable we can replace it:
+	select ?pokemon ?cry ?name ?type1 ?type2{
+	        ?pokemon vocab:color ?color;
+	        	vocab:cry ?ccry;
+	        	vocab:#label ?type1;
+	        	vocab:color/#label ?type2
+	    }
+	    limit 10
+
+
+Finally we can summarise it in this table:
+	
+	Symbol	||	Notation
+	--------------------------
+	.			Simple triple
+	;			Predicat list
+	,			Object list
+
+
+/********Litteral abreviations*********/
+	
+	eg		||	Datatype iri
+	-------------------------
+	false		xsd:boolean
+	12			xsd:integer
+	11.5		xsd:decimal
+	11.2e0		xsd:double
+	"abc"		xsd:string
+
+
+
+
+
+
+
+
+
+
+
+
+

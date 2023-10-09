@@ -15,7 +15,7 @@ Bootstrap is a framework HTML, CSS and js
 Breakpoint      Class infix     Dimensions
 Xsmall          sm              <576px
 Small           sm              >=576px
-Medium          md              >=768px
+Medium          md              >=768
 Large           lg              >=992px
 ExtraLarge      Xl              >=1200px
 ExtraExt large  xxl             >=1400px
