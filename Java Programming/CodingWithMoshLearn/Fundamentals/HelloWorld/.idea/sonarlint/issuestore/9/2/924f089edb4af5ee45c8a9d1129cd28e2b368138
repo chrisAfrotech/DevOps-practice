@@ -1,0 +1,34 @@
+
+7
+java:S1220""Move this file to a named package.8δÿτσ³1
+X
+java:S1854ƒ"5Remove this useless assignment to local variable "n".(Ηκ—λύÿÿÿÿ8νÿτσ³1
+X
+java:S1854"5Remove this useless assignment to local variable "r".(ΊψρΆύÿÿÿÿ8ξÿτσ³1
+W
+java:S1854"5Remove this useless assignment to local variable "p".(Γγƒÿÿÿÿÿ8οÿτσ³1
+]
+java:S1854|";Remove this useless assignment to local variable "scanner".(ω ƒ‘όÿÿÿÿ8οÿτσ³1
+]	java:S125"<This block of commented-out lines of code should be removed.(σώ“ϊÿÿÿÿ8πÿτσ³1
+X	java:S125"<This block of commented-out lines of code should be removed.(‘«’8πÿτσ³1
+]	java:S125&"<This block of commented-out lines of code should be removed.(ΥΥκ·ϊÿÿÿÿ8πÿτσ³1
+]	java:S125/"<This block of commented-out lines of code should be removed.(―Ό©όÿÿÿÿ8πÿτσ³1
+X	java:S1256"<This block of commented-out lines of code should be removed.(¶ΰΣ8πÿτσ³1
+]	java:S125;"<This block of commented-out lines of code should be removed.(™ψ’Ωύÿÿÿÿ8ρÿτσ³1
+]	java:S125Q"<This block of commented-out lines of code should be removed.(±¦°ήόÿÿÿÿ8ρÿτσ³1
+]	java:S125W"<This block of commented-out lines of code should be removed.(ά–‹·ωÿÿÿÿ8ρÿτσ³1
+X	java:S125\"<This block of commented-out lines of code should be removed.(‘ρ”ϊ8ρÿτσ³1
+]	java:S125o"<This block of commented-out lines of code should be removed.(‹λ¬Òϊÿÿÿÿ8ρÿτσ³1
+N
+java:S1481|",Remove this unused "scanner" local variable.(ω ƒ‘όÿÿÿÿ8σÿτσ³1
+L	java:S106}"+Replace this use of System.out by a logger.(ΏΈκύÿÿÿÿ8σÿτσ³1
+L	java:S106~"+Replace this use of System.out by a logger.(ϋ΄—ψÿÿÿÿ8τÿτσ³1
+H
+java:S1481"&Remove this unused "p" local variable.(Γγƒÿÿÿÿÿ8τÿτσ³1
+H	java:S106€"+Replace this use of System.out by a logger.(ώΘΔΥ8τÿτσ³1
+I
+java:S1481"&Remove this unused "r" local variable.(ΊψρΆύÿÿÿÿ8τÿτσ³1
+M	java:S106‚"+Replace this use of System.out by a logger.(ξό‡΅ύÿÿÿÿ8τÿτσ³1
+I
+java:S1481ƒ"&Remove this unused "n" local variable.(Ηκ—λύÿÿÿÿ8υÿτσ³1
+Y	java:S125„"<This block of commented-out lines of code should be removed.(Θλμ™8υÿτσ³1
