@@ -63,7 +63,7 @@ public class main {
 //            String className = income > 100_000 ? "First" : "Economy";
 //        System.out.println(className);
 
-        //Exercise FIZZBUZZ
+        //*********************Exercise FIZZBUZZ
 //       if number divisible by 5)
 //        result: FIzz
 //      if number divisible by 3
@@ -73,25 +73,41 @@ public class main {
 //        if not divisible by 3 and 5
 //        result: number
 
-        System.out.println("***********FIZZBUZZ GAME***********");
-        final byte dividerFive = 5;
-        final byte dividerThree = 3;
+//        System.out.println("***********FIZZBUZZ GAME***********");
+//        final byte dividerFive = 5;
+//        final byte dividerThree = 3;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Enter a number: ");
+//
+//        byte number = sc.nextByte();
+//
+//        if ((number % dividerThree == 0) && (number % dividerFive == 0)) {
+//            System.out.println("FIZZBUZZ");
+//        }else if ( (number % dividerFive) == 0 ) {
+//            System.out.println("FIZZ");
+//        } else if ((number % dividerThree) == 0) {
+//            System.out.println("BUZZ");
+//        } else
+//            System.out.println(number);
 
-        Scanner sc = new Scanner(System.in);
+        //************for loop**********
+//        for (int i = 0; i < 5; i++){
+//            System.out.println("Hello world");
+//        }
 
-        System.out.print("Enter a number: ");
-
-        byte number = sc.nextByte();
-
-        if ((number % dividerThree == 0) && (number % dividerFive == 0)) {
-            System.out.println("FIZZBUZZ");
-        }else if ( (number % dividerFive) == 0 ) {
-            System.out.println("FIZZ");
-        } else if ((number % dividerThree) == 0) {
-            System.out.println("BUZZ");
-        } else
-            System.out.println(number);
-
-
+        //*****************For each loop
+        String[] fruits = {"Apple", "Mango", "Orange"};
+        for (int i = 0; i < fruits.length; i++) {
+            System.out.println(fruits[i]);
+        }
+    //here int he for each lop we can\t have access to the index of each items
+        for (String fruit : fruits){
+            System.out.println(fruit);
+        }
+        
+        
+        
     }
 }
