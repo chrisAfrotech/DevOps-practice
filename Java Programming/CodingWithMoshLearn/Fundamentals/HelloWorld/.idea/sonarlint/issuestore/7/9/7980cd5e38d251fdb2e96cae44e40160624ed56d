@@ -1,0 +1,19 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8Œ©•ì´1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ù®åäÿÿÿÿÿ8©•ì´1
+i
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(Çµí‘8©•ì´1
+]	java:S125"<This block of commented-out lines of code should be removed.(™ø’Ùıÿÿÿÿ8–©•ì´1
+]	java:S125"<This block of commented-out lines of code should be removed.(ë†íûÿÿÿÿ8–©•ì´1
+]	java:S125"<This block of commented-out lines of code should be removed.(®Î„ıÿÿÿÿ8–©•ì´1
+]	java:S125"<This block of commented-out lines of code should be removed.(÷â¸ºûÿÿÿÿ8–©•ì´1
+X	java:S125"<This block of commented-out lines of code should be removed.(›æ§Ê8–©•ì´1
+]	java:S125("<This block of commented-out lines of code should be removed.(éÚõûÿÿÿÿ8—©•ì´1
+X	java:S1255"<This block of commented-out lines of code should be removed.(¼‹ß8—©•ì´1
+X	java:S125>"<This block of commented-out lines of code should be removed.(·Ìœ§8—©•ì´1
+X	java:S125L"<This block of commented-out lines of code should be removed.(ê“à€8—©•ì´1
+]	java:S125`"<This block of commented-out lines of code should be removed.(‹¾«Ïøÿÿÿÿ8—©•ì´1
+F	java:S106g"+Replace this use of System.out by a logger.(ÜÌ—58˜©•ì´1
+G	java:S106k"+Replace this use of System.out by a logger.(˜©â‘8²Ş•ì´1
+P
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8™©•ì´1

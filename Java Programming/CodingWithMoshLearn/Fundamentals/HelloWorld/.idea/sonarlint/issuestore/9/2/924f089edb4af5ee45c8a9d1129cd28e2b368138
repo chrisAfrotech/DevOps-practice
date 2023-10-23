@@ -1,14 +1,6 @@
 
 7
 java:S1220""Move this file to a named package.8äÿôó³1
-X
-java:S1854ƒ"5Remove this useless assignment to local variable "n".(Çê—ëıÿÿÿÿ8íÿôó³1
-X
-java:S1854"5Remove this useless assignment to local variable "r".(ºøñ¢ıÿÿÿÿ8îÿôó³1
-W
-java:S1854"5Remove this useless assignment to local variable "p".(ÃãƒŸÿÿÿÿÿ8ïÿôó³1
-]
-java:S1854|";Remove this useless assignment to local variable "scanner".(ù ƒ‘üÿÿÿÿ8ïÿôó³1
 ]	java:S125"<This block of commented-out lines of code should be removed.(óş“úÿÿÿÿ8ğÿôó³1
 X	java:S125"<This block of commented-out lines of code should be removed.(‘«’Š8ğÿôó³1
 ]	java:S125&"<This block of commented-out lines of code should be removed.(ÕÕê·úÿÿÿÿ8ğÿôó³1
@@ -19,16 +11,17 @@ X	java:S1256"<This block of commented-out lines of code should be removed.(¶šà
 ]	java:S125W"<This block of commented-out lines of code should be removed.(Ü–‹·ùÿÿÿÿ8ñÿôó³1
 X	java:S125\"<This block of commented-out lines of code should be removed.(‘ñ”ú8ñÿôó³1
 ]	java:S125o"<This block of commented-out lines of code should be removed.(‹ë¬Òúÿÿÿÿ8ñÿôó³1
-N
-java:S1481|",Remove this unused "scanner" local variable.(ù ƒ‘üÿÿÿÿ8óÿôó³1
-L	java:S106}"+Replace this use of System.out by a logger.(¿¸ˆêıÿÿÿÿ8óÿôó³1
-L	java:S106~"+Replace this use of System.out by a logger.(û´—øÿÿÿÿ8ôÿôó³1
+M	java:S106"+Replace this use of System.out by a logger.(¾š”„ûÿÿÿÿ8™¢ñæ´1
+M	java:S106ƒ"+Replace this use of System.out by a logger.(ğ‰Ë¬ıÿÿÿÿ8›¢ñæ´1
+H	java:S106†"+Replace this use of System.out by a logger.(şÈÄÕ8ôÿôó³1
+M	java:S106Š"+Replace this use of System.out by a logger.(º…è®ıÿÿÿÿ8¡¢ñæ´1
+M	java:S106”"+Replace this use of System.out by a logger.(ÕÙ›Àıÿÿÿÿ8©¢ñæ´1
+X	java:S125—"<This block of commented-out lines of code should be removed.(‡ˆ„58­¢ñæ´1
+B
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8¶¢ñæ´1
+Q
+java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8¹¢ñæ´1
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8º¢ñæ´1
 H
-java:S1481"&Remove this unused "p" local variable.(ÃãƒŸÿÿÿÿÿ8ôÿôó³1
-H	java:S106€"+Replace this use of System.out by a logger.(şÈÄÕ8ôÿôó³1
-I
-java:S1481"&Remove this unused "r" local variable.(ºøñ¢ıÿÿÿÿ8ôÿôó³1
-M	java:S106‚"+Replace this use of System.out by a logger.(îü‡¡ıÿÿÿÿ8ôÿôó³1
-I
-java:S1481ƒ"&Remove this unused "n" local variable.(Çê—ëıÿÿÿÿ8õÿôó³1
-Y	java:S125„"<This block of commented-out lines of code should be removed.(Èëì™8õÿôó³1
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8¼¢ñæ´1
