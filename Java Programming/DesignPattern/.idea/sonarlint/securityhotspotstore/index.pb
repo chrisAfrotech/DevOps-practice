@@ -1,0 +1,15 @@
+
+Z
+*creationalDesignPattern/Singleton/App.java,0/7/07f681e63cf81bb6baf42dcfc5f691f437d50126
+b
+2creationalDesignPattern/Factory/JDBCSingleton.java,e/8/e8284f709013f2664e0f6a1b1d545af5f0d06bf0
+h
+8creationalDesignPattern/Singleton/JDBCSingletonDemo.java,b/8/b81ac014f227125e0d1fd16435c591fef2a974ee
+h
+8creationalDesignPattern/Factory2/FactoryPatternDemo.java,a/4/a40dfee310ebdd494aaa3011f44977baca2a57dc
+r
+BcreationalDesignPattern/Factory2/Factory2Package/ShapeFactory.java,d/8/d8a78e29473f9c77d85fb7e033547489707787c1
+O
+StructureDesignPattern/note.txt,a/b/ab2f1fb93d954bd7417f8ee5b426dbc93d8a97b0
+P
+ StructureDesignPattern/Test.java,8/b/8b424184644372191562b2786450449a16a5e628

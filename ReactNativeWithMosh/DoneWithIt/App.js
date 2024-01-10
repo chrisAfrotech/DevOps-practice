@@ -1,21 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet,SafeAreaView, Button } from 'react-native';
+import React from "react";
+import { View } from "react-native-web";
 
-export default function App() {  
-  const handlePress = () => console.log("Text pressed");
-  console.log(require("./assets/splash.png"));
+export default function App(){
   return (
-    <SafeAreaView style={styles.container}>
-      <Button color ="orange" title="click Me" onPress={() => console.log("Button clicked")} />
-    </SafeAreaView>
-  );
+    <view
+      style={{
+        backgroundColor: "dodgerblue",
+        flex: 0.8,
+      }}
+    ></view>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-});
